@@ -36,8 +36,7 @@ def compute_calib_values(calib_doc_lines: List) -> List:
 
     for line in calib_doc_lines:
         calib_value = line_to_calib(line)
-        print(calib_value)
-        break
+        calib_values.append(calib_value)
 
     return calib_values
 
