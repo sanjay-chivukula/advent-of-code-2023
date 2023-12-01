@@ -3,7 +3,12 @@ from typing import List
 
 
 def read_inputs(filepath: Path) -> List:
-    pass
+    lines = []
+    with open(filepath, 'r') as f_handle:
+        while line := f_handle.readline():
+            lines.append(line.rstrip())
+
+    return lines
 
 
 def line_to_calib(doc_line: str) -> int:
