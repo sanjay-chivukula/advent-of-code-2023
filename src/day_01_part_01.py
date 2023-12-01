@@ -46,7 +46,7 @@ def process_calib_values(calib_values: List) -> int:
 
 
 def driver_main():
-    inputs_path = Path("inputs/aoc-2023-d1-p1-input.txt")
+    inputs_path = Path("../inputs/aoc-2023-d1-p1-input.txt")
     calib_doc_lines = read_inputs(inputs_path)
     calib_values = compute_calib_values(calib_doc_lines)
     output_data = process_calib_values(calib_values)
