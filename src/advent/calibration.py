@@ -1,12 +1,13 @@
 from typing import List
 
+DIGITS = "0123456789"
+
 
 def parse_by_digit(doc_line: str) -> int:
-    digits = "0123456789"
     l_digit, r_digit = None, None
 
     for char in doc_line:
-        if char in digits:
+        if char in DIGITS:
             if l_digit is None:
                 l_digit = char
             if r_digit is None:
