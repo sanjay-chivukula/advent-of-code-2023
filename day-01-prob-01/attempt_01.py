@@ -32,7 +32,14 @@ def line_to_calib(doc_line: str) -> int:
 
 
 def compute_calib_values(calib_doc_lines: List) -> List:
-    pass
+    calib_values = []
+
+    for line in calib_doc_lines:
+        calib_value = line_to_calib(line)
+        print(calib_value)
+        break
+
+    return calib_values
 
 
 def process_calib_values(calib_values: List) -> int:
