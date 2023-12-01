@@ -1,24 +1,15 @@
 from pathlib import Path
 from typing import List
 
-from advent.calibration import process_calib_values, get_first_digit
+from advent.calibration import process_calib_values, parse_by_digit
 from advent.utils import read_inputs
-
-
-def line_to_calib(doc_line: str) -> int:
-    l_idx_gen, r_idx_gen = range(0, len(doc_line), 1), range(len(doc_line) - 1, -1, -1)
-
-    l_digit = get_first_digit(doc_line, l_idx_gen)
-    r_digit = get_first_digit(doc_line, r_idx_gen)
-    calib_value = int(l_digit + r_digit)
-    return calib_value
 
 
 def compute_calib_values(calib_doc_lines: List) -> List:
     calib_values = []
 
     for line in calib_doc_lines:
-        calib_value = line_to_calib(line)
+        calib_value = parse_by_digit(line)
         calib_values.append(calib_value)
 
     return calib_values
