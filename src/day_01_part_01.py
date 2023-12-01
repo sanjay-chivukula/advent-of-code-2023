@@ -1,14 +1,7 @@
 from pathlib import Path
 from typing import List
 
-
-def read_inputs(filepath: Path) -> List:
-    lines = []
-    with open(filepath, 'r') as f_handle:
-        while line := f_handle.readline():
-            lines.append(line.rstrip())
-
-    return lines
+from advent.utils import read_inputs
 
 
 def get_first_digit(line: str, range_gen) -> [int, None]:
