@@ -23,7 +23,12 @@ def get_first_digit(line: str, range_gen) -> [int, None]:
 
 
 def line_to_calib(doc_line: str) -> int:
-    pass
+    l_idx_gen, r_idx_gen = range(0, len(doc_line), 1), range(len(doc_line) - 1, -1, -1)
+
+    l_digit = get_first_digit(doc_line, l_idx_gen)
+    r_digit = get_first_digit(doc_line, r_idx_gen)
+    calib_value = int(l_digit + r_digit)
+    return calib_value
 
 
 def compute_calib_values(calib_doc_lines: List) -> List:
