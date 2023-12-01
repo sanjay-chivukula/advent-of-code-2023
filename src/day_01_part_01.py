@@ -25,7 +25,7 @@ def line_to_calib(doc_line: str) -> int:
     return calib_value
 
 
-def parse_calib_lines(calib_doc_lines: List) -> List:
+def compute_calib_values(calib_doc_lines: List) -> List:
     calib_values = []
 
     for line in calib_doc_lines:
@@ -38,7 +38,7 @@ def parse_calib_lines(calib_doc_lines: List) -> List:
 def driver_main():
     inputs_path = Path("../inputs/aoc-2023-d1-p1-input.txt")
     calib_doc_lines = read_inputs(inputs_path)
-    calib_values = parse_calib_lines(calib_doc_lines)
+    calib_values = compute_calib_values(calib_doc_lines)
     output_data = process_calib_values(calib_values)
     print(output_data)
 
