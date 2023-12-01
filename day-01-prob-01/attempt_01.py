@@ -42,7 +42,7 @@ def compute_calib_values(calib_doc_lines: List) -> List:
 
 
 def process_calib_values(calib_values: List) -> int:
-    pass
+    return sum(calib_values)
 
 
 def driver_main():
