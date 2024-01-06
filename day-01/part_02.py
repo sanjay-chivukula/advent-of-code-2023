@@ -37,7 +37,7 @@ def process_data(data: List[str]):
 
 
 def driver_main():
-    filepath = Path("../../inputs/d01-main.txt")
+    filepath = Path("../inputs/d01-main.txt")
     data = parse_input(filepath)
     total = process_data(data)
     print(total)

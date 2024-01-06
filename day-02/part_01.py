@@ -27,7 +27,7 @@ def compute_valid_game_sum(doc_lines: List[str]):
 
 
 def driver_main():
-    filepath = Path("../../inputs/d02-main.txt")
+    filepath = Path("../inputs/d02-main.txt")
     doc_lines = parse_input(filepath)
 
     valid_game_sum = compute_valid_game_sum(doc_lines)
