@@ -31,7 +31,7 @@ def compute_game_power(doc_lines: List[str]):
 
 
 def driver_main():
-    filepath = Path("../../inputs/d02-main.txt")
+    filepath = Path("../inputs/d02-main.txt")
     doc_lines = parse_input(filepath)
 
     game_power_sum = compute_game_power(doc_lines)
